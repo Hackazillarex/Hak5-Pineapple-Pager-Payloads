@@ -2,11 +2,11 @@
 # Title: Full Bluetooth Scan
 # Author: Hackazillarex
 # Description: One-shot full scan of Classic and BLE devices on Pineapple Pager
-# Version: 1.0
+# Version: 1.1
 
 # === CONFIG ===
 LOOT_DIR="/root/loot/bluetooth"
-SCAN_DURATION=150       # 2.5 minutes
+SCAN_DURATION=90       # 1.5 minutes
 DATE_FMT="+%Y-%m-%d_%H-%M-%S"
 HOSTNAME="$(hostname)"
 
@@ -42,25 +42,31 @@ OUT="$LOOT_DIR/bt_scan_$TS.txt"
     # --- BLE Devices ---
     echo "--- BLE Devices ---"
     echo "Scanning for $SCAN_DURATION seconds..."
-    
+
+    TMP_BLE="/tmp/bt_ble_scan.log"
+    >"$TMP_BLE"  # empty file
+
     # Start BLE scan in background
-    bluetoothctl scan on >/tmp/bt_ble_scan.log 2>/dev/null &
+    bluetoothctl scan on >/dev/null 2>&1 &
     SCAN_PID=$!
 
-    # Wait for the scan duration
-    sleep "$SCAN_DURATION"
+    START=$(date +%s)
+    while (( $(date +%s) - START < SCAN_DURATION )); do
+        bluetoothctl devices 2>/dev/null | awk '{print "Device "$2" "$3}' >> "$TMP_BLE"
+        sleep 5
+    done
 
     # Stop scanning
     bluetoothctl scan off >/dev/null 2>&1
     kill $SCAN_PID >/dev/null 2>&1
 
     # Output unique devices
-    if [[ -s /tmp/bt_ble_scan.log ]]; then
-        grep -E "Device|NEW" /tmp/bt_ble_scan.log | awk '!seen[$0]++'
+    if [[ -s "$TMP_BLE" ]]; then
+        awk '!seen[$0]++' "$TMP_BLE"
     else
         echo "No BLE devices found."
     fi
-    rm -f /tmp/bt_ble_scan.log
+    rm -f "$TMP_BLE"
 
 } > "$OUT"
 
