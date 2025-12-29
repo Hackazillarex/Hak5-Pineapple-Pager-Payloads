@@ -2,7 +2,7 @@
 # Title: Full Bluetooth Scan
 # Author: Hackazillarex , Log Viewer scripted by Brandon Starkweather
 # Description: One-shot full scan of Classic and BLE devices on Pineapple Pager
-# Version: 1.3
+# Version: 1.4
 
 # === CONFIG ===
 LOOT_DIR="/root/loot/bluetooth"
@@ -19,10 +19,12 @@ for cmd in hciconfig hcitool bluetoothctl; do
 done
 hciconfig | grep -q hci0 || { LOG red "No hci0 device found"; exit 1; }
 
-LOG blue "Bluetooth Scan starting on $HOSTNAME"
+LOG blue "Bluetooth Scan is starting" 
 
 TS="$(date "$DATE_FMT")"
 OUT="$LOOT_DIR/bt_scan_$TS.txt"
+
+LOG yellow "Scanning for 90 seconds"
 
 {
     echo "=== Bluetooth Pager Full Scan ==="
@@ -40,9 +42,19 @@ OUT="$LOOT_DIR/bt_scan_$TS.txt"
     fi
 
     echo
+    
+LOG green "------------------------------"
+    
+LOG blue "Classic Bluetooth Scan completed!" 
+
+LOG yellow "Now scanning BLE Devices"
+
+LOG green "------------------------------"
+    
     # --- BLE Devices ---
     echo "--- BLE Devices ---"
     echo "Scanning for $SCAN_DURATION seconds..."
+    
 
     TMP_BLE="/tmp/bt_ble_scan.log"
     >"$TMP_BLE"
@@ -56,6 +68,10 @@ OUT="$LOOT_DIR/bt_scan_$TS.txt"
         sleep 5
     done
 
+LOG yellow "BLE Device scan is almost finished"
+
+LOG green "------------------------------"
+
     bluetoothctl scan off >/dev/null 2>&1
     kill "$SCAN_PID" >/dev/null 2>&1
 
@@ -68,6 +84,8 @@ OUT="$LOOT_DIR/bt_scan_$TS.txt"
     rm -f "$TMP_BLE"
 
 } > "$OUT"
+
+LOG blue "Scanning is coming to an end and Log Viewer will start shortly"
 
 # --- Cleanup empty logs ---
 if ! grep -q "Device" "$OUT"; then
