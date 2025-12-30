@@ -2,7 +2,7 @@
 # Title: Ethernet Mod Nmap Recon Payload
 # Author: Hackazillarex
 # Description: Gateway + 10 Host Fast Port Recon
-# Version: 1.0
+# Version: 1.2
 
 ETH_IF="eth1"
 LOOT_DIR="/root/loot/ethernet_nmap"
@@ -13,7 +13,20 @@ LOG_VIEWER="/root/payloads/user/general/log_viewer/payload.sh"
 LOG blue "Starting Ethernet NMAP Scan!"
 LOG green "------------------------------"
 
+# Check for USB Ethernet adapter (Realtek RTL8152)
+USB_ETH_ID="0bda:8152"
+
+if lsusb 2>/dev/null | grep -qi "$USB_ETH_ID"; then
+    LOG yellow "USB Ethernet Adapter Found"
+else
+    LOG red "USB Ethernet Adapter NOT Found"
+    ERROR_DIALOG "No Ethernet Adapter Found"
+    LED FAIL
+    exit 1
+fi
+
 # Bring up Ethernet interface and get DHCP
+
 ip link set $ETH_IF up
 udhcpc -i $ETH_IF -q || { LED FAIL; exit 1; }
 
