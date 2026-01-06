@@ -7,8 +7,7 @@
 ############################
 # Configuration
 ############################
-RESPONDER_REPO="https://github.com/Hackazillarex/Responder.git"
-RESPONDER_DIR="/root/tools/responder"
+RESPONDER_DIR="/root/payloads/user/exfiltration/Responder_Payload/responder"
 LOOTDIR="/root/loot/responder"
 SESSION_DIR="$LOOTDIR/session_$(date +%Y%m%d_%H%M%S)"
 INTERFACE="wlan0cli"
@@ -44,16 +43,12 @@ for pkg in python3 python3-netifaces git; do
 done
 
 ############################
-# Clone Responder
+# Check for Responder
 ############################
-if [ ! -d "$RESPONDER_DIR" ]; then
-    LOG blue "Cloning Responder..."
-    git clone "$RESPONDER_REPO" "$RESPONDER_DIR"
-
-    if [ ! -f "$RESPONDER_DIR/Responder.py" ]; then
-        LOG red "Responder clone failed!"
-        exit 1
-    fi
+if [ ! -d "$RESPONDER_DIR" ] || [ ! -f "$RESPONDER_DIR/Responder.py" ]; then
+    LOG red "Responder not found!"
+    LOG red "Please place the included Responder tool in /root/payloads/user/exfiltration/Responder_Payload and try again"
+    exit 1
 else
     LOG green "Responder already present."
 fi
