@@ -1,0 +1,360 @@
+Fri, 02 Jan 2026 20:19:09 GMT
+Current environment is:
+Network Config:
+br-lan    Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          inet addr:172.16.52.1  Bcast:172.16.52.255  Mask:255.255.255.0
+          inet6 addr: fe80::213:37ff:fead:c0a8/64 Scope:Link
+          inet6 addr: fd72:689f:c6b8::1/60 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:64295 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:13409 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:3700119 (3.5 MiB)  TX bytes:162244562 (154.7 MiB)
+
+eth0      Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:64471 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:115748 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:4613462 (4.3 MiB)  TX bytes:169002968 (161.1 MiB)
+          Interrupt:5 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1299 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1299 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:86319 (84.2 KiB)  TX bytes:86319 (84.2 KiB)
+
+wlan0cli  Link encap:Ethernet  HWaddr 0A:13:37:AD:C0:A8  
+          inet addr:10.0.0.137  Bcast:10.0.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::813:37ff:fead:c0a8/64 Scope:Link
+          inet6 addr: 2601:840:4684:2f50::293/128 Scope:Global
+          inet6 addr: 2601:840:4684:2f50:813:37ff:fead:c0a8/64 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:37909 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6997 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:17652517 (16.8 MiB)  TX bytes:1128503 (1.0 MiB)
+
+wlan0mgmt Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:40 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6272 (6.1 KiB)
+
+wlan0mon  Link encap:UNSPEC  HWaddr 00-13-37-AD-C0-A8-00-00-00-00-00-00-00-00-00-00  
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:373321 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:91607310 (87.3 MiB)  TX bytes:0 (0.0 B)
+
+wlan0open Link encap:Ethernet  HWaddr 02:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:38 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6116 (5.9 KiB)
+
+wlan0wpa  Link encap:Ethernet  HWaddr 06:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:38 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6116 (5.9 KiB)
+
+wlan1mon  Link encap:UNSPEC  HWaddr 00-13-37-AD-30-F8-00-00-00-00-00-00-00-00-00-00  
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:105503 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:19762034 (18.8 MiB)  TX bytes:0 (0.0 B)
+
+
+DNS Settings:
+nameserver 127.0.0.1
+nameserver ::1
+
+Routing info:
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         10.0.0.1        0.0.0.0         UG        0 0          0 wlan0cli
+10.0.0.0        0.0.0.0         255.255.255.0   U         0 0          0 wlan0cli
+172.16.52.0     0.0.0.0         255.255.255.0   U         0 0          0 br-lan
+
+
+
+Fri, 02 Jan 2026 20:22:26 GMT
+Current environment is:
+Network Config:
+br-lan    Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          inet addr:172.16.52.1  Bcast:172.16.52.255  Mask:255.255.255.0
+          inet6 addr: fe80::213:37ff:fead:c0a8/64 Scope:Link
+          inet6 addr: fd72:689f:c6b8::1/60 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:71511 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14635 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:4076960 (3.8 MiB)  TX bytes:181092967 (172.7 MiB)
+
+eth0      Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:71696 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:128932 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:5091705 (4.8 MiB)  TX bytes:188640601 (179.9 MiB)
+          Interrupt:5 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1383 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1383 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:91511 (89.3 KiB)  TX bytes:91511 (89.3 KiB)
+
+wlan0cli  Link encap:Ethernet  HWaddr 0A:13:37:AD:C0:A8  
+          inet addr:10.0.0.137  Bcast:10.0.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::813:37ff:fead:c0a8/64 Scope:Link
+          inet6 addr: 2601:840:4684:2f50::293/128 Scope:Global
+          inet6 addr: 2601:840:4684:2f50:813:37ff:fead:c0a8/64 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:40097 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7239 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:18457195 (17.6 MiB)  TX bytes:1163490 (1.1 MiB)
+
+wlan0mgmt Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:40 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6272 (6.1 KiB)
+
+wlan0mon  Link encap:UNSPEC  HWaddr 00-13-37-AD-C0-A8-00-00-00-00-00-00-00-00-00-00  
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:390563 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:96837181 (92.3 MiB)  TX bytes:0 (0.0 B)
+
+wlan0open Link encap:Ethernet  HWaddr 02:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:38 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6116 (5.9 KiB)
+
+wlan0wpa  Link encap:Ethernet  HWaddr 06:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:38 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6116 (5.9 KiB)
+
+wlan1mon  Link encap:UNSPEC  HWaddr 00-13-37-AD-30-F8-00-00-00-00-00-00-00-00-00-00  
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:116005 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:22816052 (21.7 MiB)  TX bytes:0 (0.0 B)
+
+
+DNS Settings:
+nameserver 127.0.0.1
+nameserver ::1
+
+Routing info:
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         10.0.0.1        0.0.0.0         UG        0 0          0 wlan0cli
+10.0.0.0        0.0.0.0         255.255.255.0   U         0 0          0 wlan0cli
+172.16.52.0     0.0.0.0         255.255.255.0   U         0 0          0 br-lan
+
+
+
+Fri, 02 Jan 2026 20:23:55 GMT
+Current environment is:
+Network Config:
+br-lan    Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          inet addr:172.16.52.1  Bcast:172.16.52.255  Mask:255.255.255.0
+          inet6 addr: fe80::213:37ff:fead:c0a8/64 Scope:Link
+          inet6 addr: fd72:689f:c6b8::1/60 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:74331 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:15159 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:4224479 (4.0 MiB)  TX bytes:188379568 (179.6 MiB)
+
+eth0      Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:74521 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:134059 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:5278914 (5.0 MiB)  TX bytes:196231000 (187.1 MiB)
+          Interrupt:5 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1424 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1424 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:94219 (92.0 KiB)  TX bytes:94219 (92.0 KiB)
+
+wlan0cli  Link encap:Ethernet  HWaddr 0A:13:37:AD:C0:A8  
+          inet addr:10.0.0.137  Bcast:10.0.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::813:37ff:fead:c0a8/64 Scope:Link
+          inet6 addr: 2601:840:4684:2f50::293/128 Scope:Global
+          inet6 addr: 2601:840:4684:2f50:813:37ff:fead:c0a8/64 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:41018 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7341 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:18800477 (17.9 MiB)  TX bytes:1178235 (1.1 MiB)
+
+wlan0mgmt Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:40 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6272 (6.1 KiB)
+
+wlan0mon  Link encap:UNSPEC  HWaddr 00-13-37-AD-C0-A8-00-00-00-00-00-00-00-00-00-00  
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:398356 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:99088425 (94.4 MiB)  TX bytes:0 (0.0 B)
+
+wlan0open Link encap:Ethernet  HWaddr 02:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:38 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6116 (5.9 KiB)
+
+wlan0wpa  Link encap:Ethernet  HWaddr 06:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:38 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6116 (5.9 KiB)
+
+wlan1mon  Link encap:UNSPEC  HWaddr 00-13-37-AD-30-F8-00-00-00-00-00-00-00-00-00-00  
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:118945 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:23295660 (22.2 MiB)  TX bytes:0 (0.0 B)
+
+
+DNS Settings:
+nameserver 127.0.0.1
+nameserver ::1
+
+Routing info:
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         10.0.0.1        0.0.0.0         UG        0 0          0 wlan0cli
+10.0.0.0        0.0.0.0         255.255.255.0   U         0 0          0 wlan0cli
+172.16.52.0     0.0.0.0         255.255.255.0   U         0 0          0 br-lan
+
+
+
+Fri, 02 Jan 2026 20:29:04 GMT
+Current environment is:
+Network Config:
+br-lan    Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          inet addr:172.16.52.1  Bcast:172.16.52.255  Mask:255.255.255.0
+          inet6 addr: fe80::213:37ff:fead:c0a8/64 Scope:Link
+          inet6 addr: fd72:689f:c6b8::1/60 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:84670 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:17178 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:4775668 (4.5 MiB)  TX bytes:214994791 (205.0 MiB)
+
+eth0      Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:84879 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:152824 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:5975647 (5.6 MiB)  TX bytes:223951459 (213.5 MiB)
+          Interrupt:5 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1553 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1553 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:102202 (99.8 KiB)  TX bytes:102202 (99.8 KiB)
+
+wlan0cli  Link encap:Ethernet  HWaddr 0A:13:37:AD:C0:A8  
+          inet addr:10.0.0.137  Bcast:10.0.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::813:37ff:fead:c0a8/64 Scope:Link
+          inet6 addr: 2601:840:4684:2f50::293/128 Scope:Global
+          inet6 addr: 2601:840:4684:2f50:813:37ff:fead:c0a8/64 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:44508 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7746 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:20072541 (19.1 MiB)  TX bytes:1243246 (1.1 MiB)
+
+wlan0mgmt Link encap:Ethernet  HWaddr 00:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:43 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6760 (6.6 KiB)
+
+wlan0mon  Link encap:UNSPEC  HWaddr 00-13-37-AD-C0-A8-00-00-00-00-00-00-00-00-00-00  
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:429801 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:107311012 (102.3 MiB)  TX bytes:0 (0.0 B)
+
+wlan0open Link encap:Ethernet  HWaddr 02:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:41 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6604 (6.4 KiB)
+
+wlan0wpa  Link encap:Ethernet  HWaddr 06:13:37:AD:C0:A8  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:41 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:6604 (6.4 KiB)
+
+wlan1mon  Link encap:UNSPEC  HWaddr 00-13-37-AD-30-F8-00-00-00-00-00-00-00-00-00-00  
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:132272 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:25718625 (24.5 MiB)  TX bytes:0 (0.0 B)
+
+
+DNS Settings:
+nameserver 127.0.0.1
+nameserver ::1
+
+Routing info:
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         10.0.0.1        0.0.0.0         UG        0 0          0 wlan0cli
+10.0.0.0        0.0.0.0         255.255.255.0   U         0 0          0 wlan0cli
+172.16.52.0     0.0.0.0         255.255.255.0   U         0 0          0 br-lan
+
+
+

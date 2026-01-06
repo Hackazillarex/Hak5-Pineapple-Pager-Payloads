@@ -1,0 +1,25 @@
+2026-01-02 15:29:04,494 - [*] 
+2026-01-02 15:29:04,557 - [*] 
+2026-01-02 15:29:04,568 - [*] 
+2026-01-02 15:29:49,512 - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+2026-01-02 15:29:49,531 - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+2026-01-02 15:29:50,764 - [*] [MDNS] Poisoned answer sent to 10.0.0.210      for name homelab.local
+2026-01-02 15:29:50,778 - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+2026-01-02 15:29:50,840 - [*] [MDNS] Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab.local
+2026-01-02 15:29:50,889 - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+2026-01-02 15:29:50,974 - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+2026-01-02 15:29:50,984 - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+2026-01-02 15:29:50,986 - [*] [MDNS] Poisoned answer sent to 10.0.0.210      for name homelab.local
+2026-01-02 15:29:51,017 - [*] [MDNS] Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab.local
+2026-01-02 15:29:51,978 - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+2026-01-02 15:29:51,991 - [*] [MDNS] Poisoned answer sent to 10.0.0.210      for name homelab.local
+2026-01-02 15:29:52,011 - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+2026-01-02 15:29:52,016 - [*] [MDNS] Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab.local
+2026-01-02 15:29:52,108 - [*] [MDNS] Poisoned answer sent to 10.0.0.210      for name homelab.local
+2026-01-02 15:29:52,126 - [*] [MDNS] Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab.local
+2026-01-02 15:29:52,124 - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+2026-01-02 15:29:52,170 - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+2026-01-02 15:29:52,768 - [*] [MDNS] Poisoned answer sent to 10.0.0.210      for name homelab.local
+2026-01-02 15:29:52,772 - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+2026-01-02 15:29:52,787 - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+2026-01-02 15:29:52,797 - [*] [MDNS] Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab.local

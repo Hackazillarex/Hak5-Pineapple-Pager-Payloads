@@ -1,0 +1,40 @@
+01/02/2026 03:18:24 PM - Responder Started: ['Responder.py', '-I', 'wlan0cli']
+01/02/2026 03:19:09 PM - [*] 
+01/02/2026 03:19:09 PM - [*] 
+01/02/2026 03:19:09 PM - [*] 
+01/02/2026 03:22:25 PM - Responder Started: ['Responder.py', '-I', 'wlan0cli', '-w', '-d']
+01/02/2026 03:22:26 PM - [*] 
+01/02/2026 03:22:26 PM - [*] 
+01/02/2026 03:22:26 PM - [*] 
+01/02/2026 03:23:54 PM - Responder Started: ['Responder.py', '-I', 'wlan0cli', '-w', '-d']
+01/02/2026 03:23:55 PM - [*] 
+01/02/2026 03:23:55 PM - [*] 
+01/02/2026 03:23:55 PM - [*] 
+01/02/2026 03:29:04 PM - Responder Started: ['Responder.py', '-I', 'wlan0cli', '-w', '-d']
+01/02/2026 03:29:04 PM - [*] 
+01/02/2026 03:29:04 PM - [*] 
+01/02/2026 03:29:04 PM - [*] 
+01/02/2026 03:29:11 PM - [*] [DHCP] Found DHCP server IP: 10.0.0.1, now waiting for incoming requests...
+01/02/2026 03:29:49 PM - [*] [DHCP] Acknowledged DHCP Request for IP: 0.0.0.0, Req IP: 10.0.0.210, MAC: 98:5F:D3:43:EA:16
+01/02/2026 03:29:49 PM - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+01/02/2026 03:29:49 PM - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+01/02/2026 03:29:50 PM - [*] [MDNS] Poisoned answer sent to 10.0.0.210      for name homelab.local
+01/02/2026 03:29:50 PM - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+01/02/2026 03:29:50 PM - [*] [MDNS] Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab.local
+01/02/2026 03:29:50 PM - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+01/02/2026 03:29:50 PM - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+01/02/2026 03:29:50 PM - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+01/02/2026 03:29:50 PM - [*] [MDNS] Poisoned answer sent to 10.0.0.210      for name homelab.local
+01/02/2026 03:29:51 PM - [*] [MDNS] Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab.local
+01/02/2026 03:29:51 PM - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+01/02/2026 03:29:51 PM - [*] [MDNS] Poisoned answer sent to 10.0.0.210      for name homelab.local
+01/02/2026 03:29:52 PM - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+01/02/2026 03:29:52 PM - [*] [MDNS] Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab.local
+01/02/2026 03:29:52 PM - [*] [MDNS] Poisoned answer sent to 10.0.0.210      for name homelab.local
+01/02/2026 03:29:52 PM - [*] [MDNS] Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab.local
+01/02/2026 03:29:52 PM - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+01/02/2026 03:29:52 PM - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+01/02/2026 03:29:52 PM - [*] [MDNS] Poisoned answer sent to 10.0.0.210      for name homelab.local
+01/02/2026 03:29:52 PM - [*] [LLMNR]  Poisoned answer sent to 10.0.0.210 for name homelab
+01/02/2026 03:29:52 PM - [*] [LLMNR]  Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab
+01/02/2026 03:29:52 PM - [*] [MDNS] Poisoned answer sent to fe80::ca9a:cae3:a010:f32c for name homelab.local
