@@ -60,7 +60,7 @@ Responder Flags Used
 
 Responder is launched with the following options:
 
--I wlan0cli – Interface
+-I wlan0cli – Interface (Client interface)
 
 -w – WPAD rogue proxy
 
