@@ -34,60 +34,58 @@ LOG white "Nick: $NICK"
 LOG white "Channel: $CHAN"
 
 ################################
-# Main loop (runs until payload is stopped)
+# Connect to IRC
 ################################
-while :; do
-    LOG white "Connecting to $SERVER..."
-    
-    exec 3<>/dev/tcp/$SERVER/$PORT || {
-        LOG red "Connection failed, retrying in 10s..."
-        sleep 10
-        continue
-    }
+LOG white "Connecting to $SERVER..."
+exec 3<>/dev/tcp/$SERVER/$PORT || { LOG red "Connection failed"; exit 1; }
 
-    # Register
-    echo "NICK $NICK" >&3
-    echo "USER $NICK 0 * :Pineapple Pager IRC" >&3
-    sleep 3
-    echo "JOIN $CHAN" >&3
+echo "NICK $NICK" >&3
+echo "USER $NICK 0 * :Pineapple Pager IRC" >&3
+sleep 3
+echo "JOIN $CHAN" >&3
+LOG green "Joined $CHAN"
 
-    LOG green "Joined $CHAN"
-
-    ################################
-    # IRC receive loop
-    ################################
+################################
+# Background: IRC receive loop
+################################
+last_msg=""
+receive_loop() {
     while read -r line <&3; do
-
-        # Respond to PINGs
-        case "$line" in
-            PING*)
-                echo "PONG ${line#PING }" >&3
-                continue
-                ;;
-        esac
-
-        # Only handle PRIVMSG lines
+        [[ $line == PING* ]] && echo "PONG ${line#PING }" >&3 && continue
         echo "$line" | grep -q "PRIVMSG" || continue
 
-        # Extract nick
         USER=$(echo "$line" | awk -F'!' '{print substr($1,2)}')
-
-        # Extract message
         MSG=$(echo "$line" | sed -n 's/^:[^!]*![^ ]* PRIVMSG [^ ]* :\(.*\)$/\1/p')
 
-        # Skip empty parses
-        [ -z "$USER" ] || [ -z "$MSG" ] && continue
+        [[ -z $USER || -z $MSG || "$USER: $MSG" == "$last_msg" ]] && continue
 
-        # Display message on Pager
         LOG white "<$USER> $MSG"
+        last_msg="$USER: $MSG"
+    done
+}
 
-        ################################
-        # Reply flow
-        ################################
-        sleep 5
-        LOG green "Launching text picker..."
-        resp=$(TEXT_PICKER "Reply to $USER" "OK")
+receive_loop &  # start background loop
+IRC_PID=$!
 
+################################
+# Main loop: DOWN to reply, B to exit
+################################
+LOG white "Press DOWN to reply, B to exit payload"
+
+while :; do
+    BUTTON=$(WAIT_FOR_INPUT 0.5)  
+    [[ -z $BUTTON ]] && continue
+
+    # Exit payload if B is pressed (unless TEXT_PICKER is active)
+    if [[ "$BUTTON" == "B" ]]; then
+        LOG red "Exiting payload..."
+        kill $IRC_PID 2>/dev/null
+        break
+    fi
+
+    # Reply flow for DOWN button
+    if [[ "$BUTTON" == "DOWN" ]]; then
+        resp=$(TEXT_PICKER "Reply to channel" "")
         case $? in
             $DUCKYSCRIPT_CANCELLED)
                 LOG red "Reply cancelled"
@@ -103,11 +101,7 @@ while :; do
                 ;;
         esac
 
-        LOG green "Sending reply"
         echo "PRIVMSG $CHAN :$resp" >&3
-
-    done
-
-    LOG red "Disconnected — reconnecting in 5s..."
-    sleep 5
+        LOG green "Sent: $resp"
+    fi
 done
